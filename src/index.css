@@ -1,3 +1,120 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.heading {
+    font-size: 2rem;
+    font-weight: 800;
+    box-sizing: border-box;
+    display: block;
+}
+
+.appBg {
+    background-color: #E5E4E2;
+    overflow: auto;
+}
+
+.leagueCard {
+    width: 250px;
+    height: 105px;
+    position: relative;
+    border-radius: 5px;
+    background-color: #1f2937;
+    box-shadow: 0 0 2rem #babbbc;
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 60px;
+}
+
+.leagueCardPhoto,
+
+
+
+
+.leagueCardContent {
+    box-sizing: border-box;
+}
+
+.leagueCardPhoto {
+    width: 100px;
+    height: 105px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #D6DBDF;
+    background-color: #fafafa;
+    margin-left: -50px;
+    box-shadow: 0 0 0.5rem #babbbc;
+}
+
+.leagueCardPhoto img {
+    width: 100%;
+}
+
+.leagueCardContent {
+    padding: 10px;
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.leagueCardContentText {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.leagueCardContentText h6,
+
+
+
+
+
+.leagueCardContentText h3 {
+    font-weight: normal;
+    margin: 3px 0;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+@media only screen and (max-width: 360px) {
+    .btn-sm {
+        font-size: 0.65rem;
+    }
+
+    .leagueCard {
+        width: 220px;
+    }
+
+    .leagueCardContentText h6,
+    .leagueCardContentText h3 {
+        font-weight: normal;
+        font-size: small;
+    }
+
+    .heading {
+        font-size: 1.75rem;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .btn-sm {
+        font-size: 0.50rem;
+    }
+
+    .leagueCard {
+        width: 190px;
+    }
+
+    .leagueCardContentText h6,
+    .leagueCardContentText h3 {
+        font-weight: normal;
+        font-size: x-small;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+}

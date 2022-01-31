@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Router>
-        <div className="flex flex-col justify-between h-screen">
+        <div className="appBg flex flex-col justify-between h-screen">
           <Navbar />
           <main>
             <Routes>

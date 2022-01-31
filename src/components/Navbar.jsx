@@ -12,22 +12,22 @@ function Header() {
     return route === location.pathname;
   };
 
-  const btn = "btn btn-ghost btn-sm rounded-btn";
-  const btnActive = "btn btn-active btn-sm rounded-btn";
+  const btn = "btn btn-ghost btn-sm rounded-btn shrink";
+  const btnActive = "btn btn-active btn-sm rounded-btn shrink";
 
   return (
-    <div className="navbar mb-2 shadow-lg drop-shadow-xl bg-neutral text-neutral-content ">
-      <div className="flex-1 px-2 mx-2">
+    <div className="navbar mb-2 shadow-lg drop-shadow-xl bg-neutral text-neutral-content">
+      <div className="flex-none mr-1">
         {/* Enable sidebar opening for the app Icon */}
-        <img src={appIcon} alt="appIcon" height="30px" width="30px" />
-        <Link
-          to="/"
-          className="text-xl md:text-2xl lg:text-2xl xl:text-2xl font-bold ml-2"
-        >
-          Football App
-        </Link>
+        <img
+          src={appIcon}
+          alt="appIcon"
+          height="28px"
+          width="28px"
+          className="flex-none"
+        />
       </div>
-      <div className="flex-auto px-2 mx-2 justify-end">
+      <div className="flex-auto px-1 mr-1 justify-end">
         <div className="flex">
           <Link to="/" className={pathMatchRoute("/") ? btnActive : btn}>
             <img src={homeIcon} alt="fixture" className="mr-2 h-4 w-4" />
