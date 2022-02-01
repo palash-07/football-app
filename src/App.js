@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Clubs from "./pages/Clubs";
 import Nations from "./pages/Nations";
 import Fixtures from "./pages/Fixtures";
+import League from "./pages/League";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
               <Route path="/clubs" element={<Clubs />} />
               <Route path="/nations" element={<Nations />} />
               <Route path="/fixtures" element={<Fixtures />} />
+              <Route path="/league/:leagueId" element={<League />} />
             </Routes>
           </main>
           <Footer />
