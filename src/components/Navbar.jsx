@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import appIcon from "../assets/appIcon.png";
 import fixtureIcon from "../assets/fixtureIcon.png";
 import clubIcon from "../assets/clubIcon.png";
-import nationsIcon from "../assets/nationsIcon.png";
+import playersIcon from "../assets/playersIcon.png";
 import homeIcon from "../assets/homeIcon.png";
 
 function Header() {
@@ -30,29 +30,29 @@ function Header() {
       <div className="flex-auto px-1 mr-1 justify-end">
         <div className="flex">
           <Link to="/" className={pathMatchRoute("/") ? btnActive : btn}>
-            <img src={homeIcon} alt="fixture" className="mr-2 h-4 w-4" />
+            <img src={homeIcon} alt="" className="h-4 w-4" />
             Home
           </Link>
           <Link
             to="/fixtures"
             className={pathMatchRoute("/fixtures") ? btnActive : btn}
           >
-            <img src={fixtureIcon} alt="fixture" className="mr-2 h-4 w-4" />
+            <img src={fixtureIcon} alt="" className="h-4 w-4" />
             Fixtures
           </Link>
           <Link
             to="/clubs"
             className={pathMatchRoute("/clubs") ? btnActive : btn}
           >
-            <img src={clubIcon} alt="fixture" className="mr-2 h-4 w-4" />
+            <img src={clubIcon} alt="" className="h-4 w-4" />
             Clubs
           </Link>
           <Link
-            to="/nations"
-            className={pathMatchRoute("/nations") ? btnActive : btn}
+            to="/players"
+            className={pathMatchRoute("/players") ? btnActive : btn}
           >
-            <img src={nationsIcon} alt="fixture" className="mr-2 h-4 w-4" />
-            Nations
+            <img src={playersIcon} alt="" className="h-4 w-4" />
+            Players
           </Link>
         </div>
       </div>
