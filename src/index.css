@@ -33,14 +33,16 @@
     height: 105px;
     position: relative;
     border-radius: 5px;
-    background-color: #1f2937;
-    box-shadow: 0 0 2rem #babbbc;
+    /* border: 1px solid #2F4F4F; */
+    background-color: #fff;
+    box-shadow: 0 0 1.25rem #000000;
     margin-top: 25px;
     margin-right: 20px;
-    margin-left: 60px;
+    margin-left: 50px;
 }
 
 .leagueCardPhoto,
+
 
 
 .leagueCardContent {
@@ -55,7 +57,7 @@
     border: 5px solid #2F4F4F;
     background-color: #fafafa;
     margin-left: -50px;
-    box-shadow: 0 0 0.5rem #babbbc;
+    box-shadow: 0 0 0.5rem #2F4F4F;
 }
 
 .leagueCardPhoto img {
@@ -74,7 +76,7 @@
 
 
 .leagueCardContentText {
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 50px;
 }
 
@@ -90,8 +92,10 @@
 
 
 
+
 .leagueCardContentText h3 {
-    font-weight: normal;
+    color: #3d4451;
+    font-weight: 580;
     margin: 3px 0;
     letter-spacing: 0.5px;
     white-space: nowrap;
@@ -104,6 +108,46 @@
     border: 5px solid #2F4F4F;
     border-radius: 5px;
     box-shadow: 0 0 2rem #1f2937;
+}
+
+.fixtureCard {
+    margin: auto;
+    width: 250px;
+    max-width: 100%;
+    border-radius: 8px;
+    /* border: 1px solid #324960; */
+    box-sizing: border-box;
+    box-shadow: 6px 5px 12px #2F4F4F;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.fixtureCardTeam,
+.fixtureCardScore {
+    font-size: 0.75rem;
+    font-weight: 600;
+    box-sizing: border-box;
+    display: block;
+    align-items: center;
+}
+
+.fixtureCardScore {
+    color: #50C878;
+    font-weight: 900;
+    font-size: 1rem;
+    align-items: center;
+}
+
+.fixtureCardDetails {
+    font-size: 0.65rem;
+    font-weight: 500;
+    box-sizing: border-box;
+    display: block;
+    color: #008080;
+    align-items: center;
 }
 
 .tableDiv {
@@ -124,6 +168,7 @@
 }
 
 .tableElement th,
+
 
 
 
@@ -163,6 +208,28 @@
         border-right: 0.5px solid #f8f8f8;
         font-size: 9px;
     }
+
+    .fixtureCard {
+        width: 170px;
+        margin-bottom: 5px;
+    }
+    
+    .fixtureCardTeam,
+    .fixtureCardScore {
+        font-size: 0.50rem;
+        font-weight: 550;
+    }
+    
+    .fixtureCardScore {
+        font-weight: 800;
+        font-size: 0.9rem;
+        align-items: center;
+    }
+    
+    .fixtureCardDetails {
+        font-size: 0.40rem;
+        font-weight: 450;
+    }
 }
 
 @media only screen and (max-width: 370px) {
@@ -178,9 +245,13 @@
         width: 220px;
     }
 
+    .leagueCardContentText {
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+
     .leagueCardContentText h6,
     .leagueCardContentText h3 {
-        font-weight: normal;
         font-size: small;
     }
 
@@ -213,9 +284,31 @@
     .tableElement td {
         font-size: 6px;
     }
+
+    .fixtureCard {
+        width: 140px;
+        margin-bottom: 5px;
+    }
+    
+    .fixtureCardTeam,
+    .fixtureCardScore {
+        font-size: 0.40rem;
+        font-weight: 500;
+    }
+    
+    .fixtureCardScore {
+        font-weight: 700;
+        font-size: 0.7rem;
+        align-items: center;
+    }
+    
+    .fixtureCardDetails {
+        font-size: 0.30rem;
+        font-weight: 400;
+    }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 311px) {
     .btn-sm {
         font-size: 0.50rem;
     }
@@ -225,12 +318,11 @@
     }
 
     .leagueCard {
-        width: 190px;
+        width: 185px;
     }
 
     .leagueCardContentText h6,
     .leagueCardContentText h3 {
-        font-weight: normal;
         font-size: x-small;
     }
 
