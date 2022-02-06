@@ -24,49 +24,49 @@ function League() {
 
   useEffect(() => {
     const fetchSeasons = async () => {
-      const res = await fetch(
-        `https://${process.env.REACT_APP_RAPIDAPI_HOST}/leagues?id=${params.leagueId}`,
-        {
-          method: "GET",
-          headers: {
-            "x-rapidapi-host": process.env.REACT_APP_RAPIDAPI_HOST,
-            "x-rapidapi-key": process.env.REACT_APP_RAPIDAPI_KEY,
-          },
-        }
-      );
+      // const res = await fetch(
+      //   `https://${process.env.REACT_APP_RAPIDAPI_HOST}/leagues?id=${params.leagueId}`,
+      //   {
+      //     method: "GET",
+      //     headers: {
+      //       "x-rapidapi-host": process.env.REACT_APP_RAPIDAPI_HOST,
+      //       "x-rapidapi-key": process.env.REACT_APP_RAPIDAPI_KEY,
+      //     },
+      //   }
+      // );
 
-      const data = await res.json();
-      const leagueInfoCopy = {
-        id: data.response[0].league.id,
-        logo: data.response[0].league.logo,
-        name: data.response[0].league.name,
-        country: data.response[0].country.name,
-        countryFlag: data.response[0].country.flag,
-        seasons: data.response[0].seasons,
-      };
-      setLeagueInfo((prevState) => ({
-        ...prevState,
-        ...leagueInfoCopy,
-      }));
-      setLoading(false);
+      // const data = await res.json();
+      // const leagueInfoCopy = {
+      //   id: data.response[0].league.id,
+      //   logo: data.response[0].league.logo,
+      //   name: data.response[0].league.name,
+      //   country: data.response[0].country.name,
+      //   countryFlag: data.response[0].country.flag,
+      //   seasons: data.response[0].seasons,
+      // };
+      // setLeagueInfo((prevState) => ({
+      //   ...prevState,
+      //   ...leagueInfoCopy,
+      // }));
+      // setLoading(false);
 
       // To comment
-      // const data = leagueData;
-      // await setTimeout(() => {
-      //   const leagueInfoCopy = {
-      //     id: data.response[0].league.id,
-      //     logo: data.response[0].league.logo,
-      //     name: data.response[0].league.name,
-      //     country: data.response[0].country.name,
-      //     countryFlag: data.response[0].country.flag,
-      //     seasons: data.response[0].seasons,
-      //   };
-      //   setLeagueInfo((prevState) => ({
-      //     ...prevState,
-      //     ...leagueInfoCopy,
-      //   }));
-      //   setLoading(false);
-      // }, 2000);
+      const data = leagueData;
+      setTimeout(() => {
+        const leagueInfoCopy = {
+          id: data.response[0].league.id,
+          logo: data.response[0].league.logo,
+          name: data.response[0].league.name,
+          country: data.response[0].country.name,
+          countryFlag: data.response[0].country.flag,
+          seasons: data.response[0].seasons,
+        };
+        setLeagueInfo((prevState) => ({
+          ...prevState,
+          ...leagueInfoCopy,
+        }));
+        setLoading(false);
+      }, 2000);
     };
 
     fetchSeasons();
@@ -109,19 +109,19 @@ function League() {
             className={category === 1 ? btn2Active : btn2}
             onClick={() => onCategoryButton(1)}
           >
-            Points Table
+            Table
           </button>
           <button
             className={category === 2 ? btn2Active : btn2}
             onClick={() => onCategoryButton(2)}
           >
-            Top Scorers
+            Goals
           </button>
           <button
             className={category === 3 ? btn2Active : btn2}
             onClick={() => onCategoryButton(3)}
           >
-            Assists Ranking
+            Assists
           </button>
         </div>
       )}

@@ -9,29 +9,29 @@ function TopAssists({ leagueId, seasonYear }) {
 
   useEffect(() => {
     const fetchTopAssists = async () => {
-      const res = await fetch(
-        `https://${process.env.REACT_APP_RAPIDAPI_HOST}/players/topassists?league=${leagueId}&season=${seasonYear}`,
-        {
-          method: "GET",
-          headers: {
-            "x-rapidapi-host": process.env.REACT_APP_RAPIDAPI_HOST,
-            "x-rapidapi-key": process.env.REACT_APP_RAPIDAPI_KEY,
-          },
-        }
-      );
-      const data = await res.json();
+      // const res = await fetch(
+      //   `https://${process.env.REACT_APP_RAPIDAPI_HOST}/players/topassists?league=${leagueId}&season=${seasonYear}`,
+      //   {
+      //     method: "GET",
+      //     headers: {
+      //       "x-rapidapi-host": process.env.REACT_APP_RAPIDAPI_HOST,
+      //       "x-rapidapi-key": process.env.REACT_APP_RAPIDAPI_KEY,
+      //     },
+      //   }
+      // );
+      // const data = await res.json();
 
-      const topAssistsCopy = [...data.response];
-      setTopAssists(topAssistsCopy);
-      setLoading(false);
+      // const topAssistsCopy = [...data.response];
+      // setTopAssists(topAssistsCopy);
+      // setLoading(false);
 
       // To comment
-      // const data = topAssistsData;
-      // await setTimeout(() => {
-      //   const topAssistsCopy = [...data.response];
-      //   setTopAssists(topAssistsCopy);
-      //   setLoading(false);
-      // }, 2000);
+      const data = topAssistsData;
+      setTimeout(() => {
+        const topAssistsCopy = [...data.response];
+        setTopAssists(topAssistsCopy);
+        setLoading(false);
+      }, 2000);
     };
 
     fetchTopAssists();

@@ -9,29 +9,29 @@ function TopScorers({ leagueId, seasonYear }) {
 
   useEffect(() => {
     const fetchTopScorers = async () => {
-      const res = await fetch(
-        `https://${process.env.REACT_APP_RAPIDAPI_HOST}/players/topscorers?league=${leagueId}&season=${seasonYear}`,
-        {
-          method: "GET",
-          headers: {
-            "x-rapidapi-host": process.env.REACT_APP_RAPIDAPI_HOST,
-            "x-rapidapi-key": process.env.REACT_APP_RAPIDAPI_KEY,
-          },
-        }
-      );
-      const data = await res.json();
+      // const res = await fetch(
+      //   `https://${process.env.REACT_APP_RAPIDAPI_HOST}/players/topscorers?league=${leagueId}&season=${seasonYear}`,
+      //   {
+      //     method: "GET",
+      //     headers: {
+      //       "x-rapidapi-host": process.env.REACT_APP_RAPIDAPI_HOST,
+      //       "x-rapidapi-key": process.env.REACT_APP_RAPIDAPI_KEY,
+      //     },
+      //   }
+      // );
+      // const data = await res.json();
 
-      const topScorersCopy = [...data.response];
-      setTopScorers(topScorersCopy);
-      setLoading(false);
+      // const topScorersCopy = [...data.response];
+      // setTopScorers(topScorersCopy);
+      // setLoading(false);
 
       // To comment
-      // const data = topScorersData;
-      // await setTimeout(() => {
-      //   const topScorersCopy = [...data.response];
-      //   setTopScorers(topScorersCopy);
-      //   setLoading(false);
-      // }, 2000);
+      const data = topScorersData;
+      setTimeout(() => {
+        const topScorersCopy = [...data.response];
+        setTopScorers(topScorersCopy);
+        setLoading(false);
+      }, 2000);
     };
 
     fetchTopScorers();

@@ -9,29 +9,29 @@ function Standings({ leagueId, seasonYear }) {
 
   useEffect(() => {
     const fetchStandings = async () => {
-      const res = await fetch(
-        `https://${process.env.REACT_APP_RAPIDAPI_HOST}/standings?league=${leagueId}&season=${seasonYear}`,
-        {
-          method: "GET",
-          headers: {
-            "x-rapidapi-host": process.env.REACT_APP_RAPIDAPI_HOST,
-            "x-rapidapi-key": process.env.REACT_APP_RAPIDAPI_KEY,
-          },
-        }
-      );
-      const data = await res.json();
+      // const res = await fetch(
+      //   `https://${process.env.REACT_APP_RAPIDAPI_HOST}/standings?league=${leagueId}&season=${seasonYear}`,
+      //   {
+      //     method: "GET",
+      //     headers: {
+      //       "x-rapidapi-host": process.env.REACT_APP_RAPIDAPI_HOST,
+      //       "x-rapidapi-key": process.env.REACT_APP_RAPIDAPI_KEY,
+      //     },
+      //   }
+      // );
+      // const data = await res.json();
 
-      const standingsCopy = [...data.response[0].league.standings];
-      setStandings(standingsCopy);
-      setLoading(false);
+      // const standingsCopy = [...data.response[0].league.standings];
+      // setStandings(standingsCopy);
+      // setLoading(false);
 
       // To comment
-      // const data = standingsData;
-      // await setTimeout(() => {
-      //   const standingsCopy = [...data.response[0].league.standings[0]];
-      //   setStandings(standingsCopy);
-      //   setLoading(false);
-      // }, 2000);
+      const data = standingsData;
+      setTimeout(() => {
+        const standingsCopy = [...data.response[0].league.standings];
+        setStandings(standingsCopy);
+        setLoading(false);
+      }, 2000);
     };
 
     fetchStandings();
