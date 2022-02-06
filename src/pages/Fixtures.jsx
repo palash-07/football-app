@@ -35,10 +35,10 @@ function Fixtures() {
   const onLeagueButton = (code) => setLeague(code);
   const onLoadMoreButton = () => {
     setDisplayedFixtures((prevState) => ({
-      rounds: [...prevState.rounds,fixtures.rounds[currentCount]]
-    }))
-    setCurrentCount(prevState => prevState+1)
-  }
+      rounds: [...prevState.rounds, fixtures.rounds[currentCount]],
+    }));
+    setCurrentCount((prevState) => prevState + 1);
+  };
 
   const btn1 = "btn btn-xs btn-outline";
   const btn1Active = btn1 + "btn-active";
@@ -99,7 +99,12 @@ function Fixtures() {
         <>
           {displayedFixtures.rounds.map((round) =>
             round.matches.map((match, index) => (
-              <div key={index} className={index%2 === 0 ? 'justify-self-end' : 'justify-self-start'}>
+              <div
+                key={index}
+                className={
+                  index % 2 === 0 ? "justify-self-end" : "justify-self-start"
+                }
+              >
                 <FixtureItem
                   date={match.date}
                   matchday={round.name}
@@ -113,11 +118,17 @@ function Fixtures() {
           )}
         </>
       )}
-      {!loading && season && league && displayedFixtures && (currentCount < fixtures.rounds.length) &&
-        (
-          <div className="col-span-2"><button className={btn1} onClick={onLoadMoreButton}>Load more...</button></div>
-        )
-      }
+      {!loading &&
+        season &&
+        league &&
+        displayedFixtures &&
+        currentCount < fixtures.rounds.length && (
+          <div className="col-span-2">
+            <button className={btn1} onClick={onLoadMoreButton}>
+              Load more...
+            </button>
+          </div>
+        )}
     </div>
   );
 }
