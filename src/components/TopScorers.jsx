@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 
 // Dummy data imports
-import { topScorersData } from "../data/dummy/TopScorersData";
+import {
+  topScorersData39,
+  topScorersData135,
+  topScorersData140,
+  topScorersData61,
+  topScorersData78,
+} from "../data/dummy/TopScorersData";
 
 function TopScorers({ leagueId, seasonYear }) {
   const [topScorers, setTopScorers] = useState([]);
@@ -26,12 +32,18 @@ function TopScorers({ leagueId, seasonYear }) {
       // setLoading(false);
 
       // To comment
-      const data = topScorersData;
+      let data;
+      if (leagueId === 39) data = topScorersData39;
+      else if (leagueId === 135) data = topScorersData135;
+      else if (leagueId === 61) data = topScorersData61;
+      else if (leagueId === 78) data = topScorersData78;
+      else if (leagueId === 140) data = topScorersData140;
+      else data = topScorersData39;
       setTimeout(() => {
         const topScorersCopy = [...data.response];
         setTopScorers(topScorersCopy);
         setLoading(false);
-      }, 2000);
+      }, 500);
     };
 
     fetchTopScorers();

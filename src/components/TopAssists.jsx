@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 
 // Dummy data imports
-import { topAssistsData } from "../data/dummy/TopAssistsData";
+import {
+  topAssistsData39,
+  topAssistsData140,
+  topAssistsData135,
+  topAssistsData61,
+  topAssistsData78,
+} from "../data/dummy/TopAssistsData";
 
 function TopAssists({ leagueId, seasonYear }) {
   const [topAssists, setTopAssists] = useState([]);
@@ -26,12 +32,18 @@ function TopAssists({ leagueId, seasonYear }) {
       // setLoading(false);
 
       // To comment
-      const data = topAssistsData;
+      let data;
+      if (leagueId === 39) data = topAssistsData39;
+      else if (leagueId === 135) data = topAssistsData135;
+      else if (leagueId === 61) data = topAssistsData61;
+      else if (leagueId === 78) data = topAssistsData78;
+      else if (leagueId === 140) data = topAssistsData140;
+      else data = topAssistsData39;
       setTimeout(() => {
         const topAssistsCopy = [...data.response];
         setTopAssists(topAssistsCopy);
         setLoading(false);
-      }, 2000);
+      }, 500);
     };
 
     fetchTopAssists();

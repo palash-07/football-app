@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 
 // Dummy data imports
-import { standingsData } from "../data/dummy/StandingsData";
+import {
+  standingsData39,
+  standingsData140,
+  standingsData61,
+  standingsData78,
+  standingsData135,
+} from "../data/dummy/StandingsData";
 
 function Standings({ leagueId, seasonYear }) {
   const [standings, setStandings] = useState([]);
@@ -26,12 +32,18 @@ function Standings({ leagueId, seasonYear }) {
       // setLoading(false);
 
       // To comment
-      const data = standingsData;
+      let data;
+      if (leagueId === 39) data = standingsData39;
+      else if (leagueId === 135) data = standingsData135;
+      else if (leagueId === 61) data = standingsData61;
+      else if (leagueId === 78) data = standingsData78;
+      else if (leagueId === 140) data = standingsData140;
+      else data = standingsData39;
       setTimeout(() => {
         const standingsCopy = [...data.response[0].league.standings];
         setStandings(standingsCopy);
         setLoading(false);
-      }, 2000);
+      }, 500);
     };
 
     fetchStandings();

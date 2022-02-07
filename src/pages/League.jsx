@@ -5,7 +5,13 @@ import TopScorers from "../components/TopScorers.jsx";
 import TopAssists from "../components/TopAssists.jsx";
 
 // Dummy data imports
-import { leagueData } from "../data/dummy/LeagueData.js";
+import {
+  leagueData39,
+  leagueData140,
+  leagueData135,
+  leagueData61,
+  leagueData78,
+} from "../data/dummy/LeagueData.js";
 
 function League() {
   const [loading, setLoading] = useState(true);
@@ -51,7 +57,14 @@ function League() {
       // setLoading(false);
 
       // To comment
-      const data = leagueData;
+      let data;
+      if (params.leagueId === "39") data = leagueData39;
+      else if (params.leagueId === "135") data = leagueData135;
+      else if (params.leagueId === "61") data = leagueData61;
+      else if (params.leagueId === "78") data = leagueData78;
+      else if (params.leagueId === "140") data = leagueData140;
+      else data = leagueData39;
+
       setTimeout(() => {
         const leagueInfoCopy = {
           id: data.response[0].league.id,
@@ -66,7 +79,7 @@ function League() {
           ...leagueInfoCopy,
         }));
         setLoading(false);
-      }, 2000);
+      }, 500);
     };
 
     fetchSeasons();
@@ -127,6 +140,7 @@ function League() {
           </button>
         </div>
       )}
+      <div className="para">dummy data will be displayed (2020-21)</div>
       {season && category === 1 && (
         <Standings leagueId={leagueInfo.id} seasonYear={season} />
       )}
