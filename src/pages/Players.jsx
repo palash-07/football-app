@@ -7,7 +7,7 @@ function Players() {
   const [searchText, setSearchText] = useState("");
   const [loading, setLoading] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
-  const [noMatch,setNoMatch] = useState(false);
+  const [noMatch, setNoMatch] = useState(false);
 
   const onChange = (e) => {
     setSearchText(e.target.value);
@@ -25,10 +25,9 @@ function Players() {
       }
     });
     setSearchText("");
-    if(results.length === 0) {
+    if (results.length === 0) {
       setNoMatch(true);
-    }
-    else {
+    } else {
       setNoMatch(false);
     }
     setSearchResults(results);
@@ -38,7 +37,7 @@ function Players() {
   const onClear = () => {
     setSearchResults([]);
     setSearchText("");
-  }
+  };
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 justify-items-center mx-5">
@@ -68,7 +67,9 @@ function Players() {
 
       {!loading && searchResults.length !== 0 && (
         <div className="col-span-1 sm:col-span-2 md:col-span-2 lg:col-span-3 xl:col-span-4">
-          <button className="btn btn-sm" onClick={onClear}>Clear</button>
+          <button className="btn btn-sm" onClick={onClear}>
+            Clear
+          </button>
         </div>
       )}
 
