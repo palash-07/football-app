@@ -81,7 +81,7 @@ function League() {
   const btn2Active = btn2 + "btn-active";
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="flex flex-col items-center justify-start">Loading...</div>;
   }
 
   return (

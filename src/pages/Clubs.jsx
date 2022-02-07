@@ -62,7 +62,7 @@ function Clubs() {
         ))}
       </div>
 
-      {loading && <div className="col-span-3 mt-5">Loading</div>}
+      {loading && <div className="col-span-3 mt-5">Loading...</div>}
 
       {!loading && league && clubList && (
         <div className="para col-span-3 mt-5 mb-5">{clubList.name}</div>

@@ -90,7 +90,7 @@ function Fixtures() {
         ))}
       </div>
 
-      {loading && <div className="col-span-2 mt-5">Loading</div>}
+      {loading && <div className="col-span-2 mt-5">Loading...</div>}
 
       {!loading && season && league && fixtures && (
         <div className="para col-span-2 mt-5 mb-5">{fixtures.name}</div>
