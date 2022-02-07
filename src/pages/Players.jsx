@@ -23,6 +23,7 @@ function Players() {
       ) {
         results.push(player);
       }
+      return null;
     });
     setSearchText("");
     if (results.length === 0) {

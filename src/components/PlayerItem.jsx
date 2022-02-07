@@ -4,7 +4,7 @@ function PlayerItem({ player }) {
       <div className="playerCardImage self-start mt-3">
         <img src={player.player_face_url} alt="" />
         <button className="btn btn-xs mt-2">
-          <a href={player.player_url} target="_blank">
+          <a href={player.player_url} target="_blank" rel="noreferrer">
             More
           </a>
         </button>
