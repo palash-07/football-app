@@ -45,6 +45,8 @@
 
 
 
+
+
 .leagueCardContent {
     box-sizing: border-box;
 }
@@ -93,6 +95,8 @@
 
 
 
+
+
 .leagueCardContentText h3 {
     color: #3d4451;
     font-weight: 580;
@@ -126,6 +130,8 @@
 }
 
 .fixtureCardTeam,
+
+
 .fixtureCardScore {
     font-size: 0.75rem;
     font-weight: 600;
@@ -164,7 +170,7 @@
     align-items: center;
 }
 
-.clubCardTeam{
+.clubCardTeam {
     font-size: 0.65rem;
     font-weight: 600;
     box-sizing: border-box;
@@ -172,7 +178,7 @@
     align-items: center;
 }
 
-.clubCardDetails{
+.clubCardDetails {
     font-size: 0.55rem;
     font-weight: 500;
     box-sizing: border-box;
@@ -204,6 +210,8 @@
 
 
 
+
+
 .tableElement td {
     text-align: left;
     padding: 8px;
@@ -219,16 +227,70 @@
     background: #324960;
 }
 
+.searchWrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.searchInput {
+    width: 500px;
+    max-width: 50%;
+    border: 4px solid #1f2937;
+    border-right: none;
+    height: 50px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 1rem #2F4F4F;
+    padding: 10px;
+    color: #1f2937;
+}
+
+.searchButton {
+    height: 50px;
+    padding: 0px 10px;
+    background-color: white;
+    border: 4px solid #1f2937;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 1rem #2F4F4F;
+}
+
+.playerCardContainer {
+    height: 120px;
+    width: 260px;
+    box-shadow: 0 10px 15px #1f2937;
+    border-radius: 10px;
+    background-size: cover;
+    justify-content: flex-start;
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.playerCardImage {
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+    border: 3px solid #1f2937;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 10px;
+    box-shadow: 0 2px 15px #1f2937;
+    background-color: #3d4451;
+}
+
 @media only screen and (max-width: 670px) {
     .clubCard {
         width: 165px;
     }
-    
-    .clubCardTeam{
+
+    .clubCardTeam {
         font-size: 0.50rem;
     }
-    
-    .clubCardDetails{
+
+    .clubCardDetails {
         font-size: 0.40rem;
     }
 }
@@ -257,19 +319,19 @@
         width: 170px;
         margin-bottom: 5px;
     }
-    
+
     .fixtureCardTeam,
     .fixtureCardScore {
         font-size: 0.50rem;
         font-weight: 550;
     }
-    
+
     .fixtureCardScore {
         font-weight: 800;
         font-size: 0.9rem;
         align-items: center;
     }
-    
+
     .fixtureCardDetails {
         font-size: 0.40rem;
         font-weight: 450;
@@ -281,12 +343,12 @@
         padding: 5px;
         border-radius: 4px;
     }
-    
-    .clubCardTeam{
+
+    .clubCardTeam {
         font-size: 0.30rem;
     }
-    
-    .clubCardDetails{
+
+    .clubCardDetails {
         font-size: 0.20rem;
     }
 }
@@ -348,19 +410,19 @@
         width: 140px;
         margin-bottom: 5px;
     }
-    
+
     .fixtureCardTeam,
     .fixtureCardScore {
         font-size: 0.40rem;
         font-weight: 500;
     }
-    
+
     .fixtureCardScore {
         font-weight: 700;
         font-size: 0.7rem;
         align-items: center;
     }
-    
+
     .fixtureCardDetails {
         font-size: 0.30rem;
         font-weight: 400;
@@ -369,12 +431,12 @@
     .clubCard {
         width: 82px;
     }
-    
-    .clubCardTeam{
+
+    .clubCardTeam {
         font-size: 0.27rem;
     }
-    
-    .clubCardDetails{
+
+    .clubCardDetails {
         font-size: 0.20rem;
     }
 }
